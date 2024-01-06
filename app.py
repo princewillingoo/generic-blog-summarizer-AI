@@ -15,8 +15,8 @@ from summarizer import (
 
 load_dotenv(find_dotenv())
 
-bee_client = ScrapingBeeClient(api_key=(os.environ.get("BEE_KEY")))
-ai_client = OpenAI(api_key=os.environ.get("OPENAI_KEY"))
+bee_client = ScrapingBeeClient(api_key=(st.secrets["BEE_KEY"]))
+ai_client = OpenAI(api_key=st.secrets["OPENAI_KEY"])
 
 tags_to_remove = [
     "footer",
